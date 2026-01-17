@@ -10,15 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v6
-    - name: set up JDK
+    - name: checkout
+      uses: actions/checkout@v6
+    - name: set up java
       uses: actions/setup-java@v5
       with:
         java-version: '8'
-        distribution: 'temurin'
-    - name: Build
+        distribution: 'oracle'
+    - name: build
       run: ./build.sh
-    - name: Upload
+    - name: upload artifact
       uses: actions/upload-artifact@v6
       with:
          name: artifact
