@@ -16,7 +16,7 @@ jobs:
       uses: actions/setup-java@v5
       with:
         java-version: '8'
-        distribution: 'oracle'
+        distribution: 'microsoft'
     - name: build
       run: ./build.sh
     - name: upload artifact
